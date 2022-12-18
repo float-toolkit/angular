@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "float-toolkit": {
+      "projectType": "library",
+      "root": "projects/float-toolkit",
+      "sourceRoot": "projects/float-toolkit/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/float-toolkit/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/float-toolkit/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/float-toolkit/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/float-toolkit/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "d1bf6908-1cc2-4815-9ede-de1b962b93ef"
   }
 }
