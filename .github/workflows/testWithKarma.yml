@@ -1,0 +1,39 @@
+name: Test with Karma
+
+on:
+  # push:
+  #   branches-ignore:
+  #     - stable
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test library
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node_modules
+        with:
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles("**/package-lock.json") }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm run test:ci
+
+      - name: Report coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          fail_ci_if_error: true
