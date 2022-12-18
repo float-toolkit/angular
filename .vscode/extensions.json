@@ -1,12 +1,12 @@
 {
-  "recommendations": [
-    "angular.ng-template",
-    "aaron-bond.better-comments",
-    "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint",
-    "eamodio.gitlens",
-    "esbenp.prettier-vscode",
-    "jock.svg",
-    "redhat.vscode-yaml"
-  ]
+	"recommendations": [
+		"angular.ng-template",
+		"aaron-bond.better-comments",
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"jock.svg",
+		"redhat.vscode-yaml"
+	]
 }

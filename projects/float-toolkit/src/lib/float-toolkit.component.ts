@@ -1,15 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'lib-float-toolkit',
-  template: `
-    <p>
-      float-toolkit works!
-    </p>
-  `,
-  styles: [
-  ]
+	selector: "lib-float-toolkit",
+	template: ` <p>float-toolkit works!</p> `,
+	styles: [],
 })
-export class FloatToolkitComponent {
-
-}
+export class FloatToolkitComponent {}

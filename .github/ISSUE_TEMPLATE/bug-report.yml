@@ -30,7 +30,8 @@ body:
     id: package-version
     attributes:
       label: Package version
-      description: Which package version are you using? You can check it in your `package.json` file or by running `npm list <package>`.
+      description:
+        Which package version are you using? You can check it in your `package.json` file or by running `npm list <package>`.
       placeholder: X.X.X
     validations:
       required: true
@@ -105,7 +106,8 @@ body:
           required: true
         - label: The issue has not already been reported.
           required: true
-        - label: You are following the project's [Code of
+        - label:
+            You are following the project's [Code of
             Conduct](https://github.com/float-toolkit/angular/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution
             guidelines](https://github.com/float-toolkit/angular/blob/master/.github/CONTRIBUTING.md).
           required: true

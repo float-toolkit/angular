@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# testing and coverage
+/logs
+/coverage
+
+# misc
+/.angular/cache

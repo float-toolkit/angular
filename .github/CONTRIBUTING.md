@@ -7,7 +7,8 @@
 **IMPORTANT:** IF YOU WANT TO REPORT A SECURITY VULNERABILITY, PLEASE USE
 [SECURITY ADVISORIES](https://github.com/float-toolkit/angular/security/advisories/new) TO FILE A PRIVATE REPORT.
 
-If you wish to contribute to the **Float Toolkit for Angular** source code, feel free to fork the repository and submit a pull request.
+If you wish to contribute to the **Float Toolkit for Angular** source code, feel free to fork the repository and submit a pull
+request.
 
 ## Steps
 

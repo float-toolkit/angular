@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { FloatToolkitService } from './float-toolkit.service';
+import { FloatToolkitService } from "./float-toolkit.service";
 
-describe('FloatToolkitService', () => {
-  let service: FloatToolkitService;
+describe("FloatToolkitService", () => {
+	let service: FloatToolkitService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(FloatToolkitService);
-  });
+	beforeEach(() => {
+		TestBed.configureTestingModule({});
+		service = TestBed.inject(FloatToolkitService);
+	});
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+	it("should be created", () => {
+		expect(service).toBeTruthy();
+	});
 });

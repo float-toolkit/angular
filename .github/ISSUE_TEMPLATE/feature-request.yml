@@ -61,7 +61,8 @@ body:
       label: Contribution guidelines
       description: By submitting this issue, you agree that...
       options:
-        - label: This is a suggestion, not you [asking for support](https://github.com/float-toolkit/angular/discussions/categories/q-a).
+        - label:
+            This is a suggestion, not you [asking for support](https://github.com/float-toolkit/angular/discussions/categories/q-a).
           required: true
         - label:
             You have read the [documentation](https://float-toolkit.web.app) and [README
@@ -73,7 +74,8 @@ body:
           required: true
         - label: This feature fits with Float Toolkit's philosophy and goals.
           required: true
-        - label: You are following the project's [Code of
+        - label:
+            You are following the project's [Code of
             Conduct](https://github.com/float-toolkit/angular/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution
             guidelines](https://github.com/float-toolkit/angular/blob/master/.github/CONTRIBUTING.md).
           required: true
