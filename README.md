@@ -1,31 +1,107 @@
-# Angular
+<div align="center" style="margin-bottom: 0.5rem">
+	<img src="https://raw.githubusercontent.com/float-toolkit/angular/HEAD/media/ftangular.svg" width="150" />
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+<div align="center">
 
-## Development server
+# Float Toolkit for Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of
-the source files.
+[![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/angular?label=version&logo=npm)](https://www.npmjs.com/package/@float-toolkit/angular)
+[![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/angular?logo=npm)](https://www.npmjs.com/package/@float-toolkit/angular)
+[![Tests status](https://img.shields.io/github/workflow/status/float-toolkit/angular/Test%20with%20Karma?label=tests&logo=angular&logoColor=white)](https://github.com/float-toolkit/angular/actions/workflows/testWithKarma.yml)
+[![Code coverage with Codecov](https://img.shields.io/codecov/c/github/float-toolkit/angular/tests?logo=codecov&logoColor=white)](https://codecov.io/gh/float-toolkit/angular)
+[![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/float-toolkit/angular/blob/master/.github/CODE_OF_CONDUCT.md)
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use
-`ng generate directive|pipe|service|class|guard|interface|enum|module`.
+An [Angular](https://angular.io/) [service](https://angular.io/guide/creating-injectable-service) wrapper for
+[**Float Toolkit**](https://float-toolkit.web.app/)
 
-## Build
+## Get started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installation
 
-## Running unit tests
+To add Float Toolkit to your Angular app, you have two options:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Install using the Angular CLI
 
-## Running end-to-end tests
+Run this command:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that
-implements end-to-end testing capabilities.
+```sh-session
+ng add @float-toolkit/angular
+```
 
-## Further help
+#### Install manually
 
-To get more help on the Angular CLI use `ng help` or go check out the
-[Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run this command:
+
+```sh-session
+npm install @float-toolkit/angular
+```
+
+Then, import the `FloatToolkitModule` into any module where you want to use the `FloatToolkit` service.
+
+```ts
+import { FloatToolkitModule } from "@float-toolkit/angular";
+
+@NgModule({
+	imports: [
+		// ...
+		FloatToolkitModule,
+	],
+})
+export class AppModule {}
+```
+
+### Usage
+
+The package exports an **Angular injectable (service)** called `FloatToolkit`. It implements an `output` state property, as well as
+FloatToolkit methods that also serve as setters for the output.
+
+```ts
+import { Component, Input, OnInit } from "@angular/core";
+import { FloatToolkit } from "@float-toolkit/angular";
+
+@Component({
+	// ...
+	template: ` <span class="number">{{ output }}</span> `,
+})
+export class SumComponent implements OnInit {
+	constructor(private ft: FloatToolkit) {}
+
+	@Input() x = 0;
+	@Input() y = 0;
+
+	get output(): number {
+		return this.ft.output;
+	}
+
+	ngOnInit(): void {
+		this.ft.add([this.x, this.y]);
+	}
+}
+```
+
+## Support
+
+Need help using Float Toolkit? Don't hesitate to reach out on
+[GitHub Discussions](https://github.com/float-toolkit/angular/discussions/categories/q-a)!
+
+## Links
+
+-   [FloatToolkit documentation (Vanilla JS)](https://float-toolkit.web.app)
+-   [GitHub](https://github.com/float-toolkit/angular)
+-   [npm](https://npmjs.com/package/@float-toolkit/angular)
+
+## Contributing
+
+Before creating an issue, please consider the following:
+
+-   Read the [documentation](https://float-toolkit.web.app) and **this file** carefully to make sure the error is actually a bug and
+    not a mistake of your own.
+-   Make sure the issue hasn't already been reported or suggested.
+-   After following these steps, you can file an issue using one of our
+    [templates](https://github.com/float-toolkit/angular/issues/new/choose). Please make sure to follow our
+    [Code of Conduct](https://github.com/float-toolkit/angular/blob/master/.github/CODE_OF_CONDUCT.md).
+-   If you wish to [submit a pull request](https://github.com/float-toolkit/angular/compare) alongside your issue, please follow our
+    [contribution guidelines](https://github.com/float-toolkit/angular/blob/master/.github/CONTRIBUTING.md).
