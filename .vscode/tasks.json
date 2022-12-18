@@ -1,42 +1,145 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558
   "version": "2.0.0",
+
   "tasks": [
     {
+      "label": "Angular: Compile",
+      "icon": {
+        "id": "archive",
+        "color": "terminal.ansiRed"
+      },
+
       "type": "npm",
-      "script": "start",
-      "isBackground": true,
-      "problemMatcher": {
-        "owner": "typescript",
-        "pattern": "$tsc",
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": {
-            "regexp": "(.*?)"
-          },
-          "endsPattern": {
-            "regexp": "bundle generation complete"
-          }
-        }
-      }
+      "script": "build",
+
+      "isBackground": false,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+
+      "problemMatcher": ["$eslint-compact"]
     },
+
     {
+      "label": "Angular Karma: Test",
+      "icon": {
+        "id": "beaker",
+        "color": "terminal.ansiGreen"
+      },
+
       "type": "npm",
       "script": "test",
+
+      "isBackground": false,
+      "group": "test",
+      "presentation": {
+        "echo": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+
+      "problemMatcher": ["$eslint-compact"]
+    },
+
+    {
+      "label": "Angular Karma: Test (Watch Mode)",
+      "icon": {
+        "id": "search",
+        "color": "terminal.ansiGreen"
+      },
+
+      "type": "npm",
+      "script": "test:watch",
+
       "isBackground": true,
-      "problemMatcher": {
-        "owner": "typescript",
-        "pattern": "$tsc",
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": {
-            "regexp": "(.*?)"
-          },
-          "endsPattern": {
-            "regexp": "bundle generation complete"
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+
+      "problemMatcher": [
+        "$eslint-compact",
+
+        {
+          "owner": "typescript",
+          "source": "ts",
+          "applyTo": "closedDocuments",
+          "fileLocation": "relative",
+          "pattern": "$tsc",
+
+          "background": {
+            "activeOnStart": true,
+
+            "beginsPattern": {
+              "regexp": "(.*?)"
+            },
+
+            "endsPattern": {
+              "regexp": "Compiled |Failed to compile."
+            }
           }
         }
-      }
+      ]
+    },
+
+    {
+      "label": "Prettier ESLint: Format",
+      "icon": {
+        "id": "wand",
+        "color": "terminal.ansiMagenta"
+      },
+
+      "type": "npm",
+      "script": "format",
+
+      "isBackground": false,
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+
+      "problemMatcher": ["$eslint-compact"]
+    },
+
+    {
+      "label": "NPM: Link local dependencies",
+      "icon": {
+        "id": "package",
+        "color": "terminal.ansiRed"
+      },
+
+      "type": "shell",
+      "command": "npm link ${input:localPackages}",
+
+      "isBackground": false,
+      "presentation": {
+        "echo": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+
+      "problemMatcher": []
+    }
+  ],
+
+  "inputs": [
+    {
+      "id": "localPackages",
+      "description": "Local dependencies to link",
+      "type": "promptString"
     }
   ]
 }

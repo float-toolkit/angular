@@ -1,3 +1,7 @@
+- name: 🛡️ Angular issue
+  description: This bug is caused by Angular
+  color: "dd0031"
+
 - name: 💣 Breaking change
   description: Unintended change that breaks existing behavior
   color: "f79f34"
@@ -13,10 +17,6 @@
 - name: 🛠️ Core package issue
   description: This bug is caused by @float-toolkit/core
   color: "f7df1e"
-
-- name: 🛡️ Angular issue
-  description: This bug is caused by Angular
-  color: "dd0031"
 
 - name: 💻 Dev Dependencies
   description: PRs that update development dependencies
@@ -74,6 +74,10 @@
   description: There is a merge conflict
   color: "261542"
 
+- name: 🧪 Needs tests
+  description: Unit testing is needed
+  color: "c23675"
+
 - name: 🍰 Nice to have
   description: Unintended behavior, but useful
   color: "c5def5"
@@ -86,9 +90,9 @@
   description: This PR is ready to be merged
   color: "0ff40b"
 
-- name: 🛡️ Security
-  description: Security or privacy concern
-  color: "b60205"
+- name: 🧪 Tests
+  description: Improvements or additions to unit tests
+  color: "9f2d60"
 
 - name: ⚙️ Unreproducible
   description: The bug cannot be reproduced
