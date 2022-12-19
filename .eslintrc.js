@@ -106,7 +106,7 @@ module.exports = {
 					"error",
 					{
 						type: "attribute",
-						prefix: "lib",
+						prefix: "ft",
 						style: "camelCase",
 					},
 				],
@@ -114,7 +114,7 @@ module.exports = {
 					"error",
 					{
 						type: "element",
-						prefix: "lib",
+						prefix: "ft",
 						style: "kebab-case",
 					},
 				],
