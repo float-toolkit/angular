@@ -30,11 +30,19 @@
 						"tsConfig": "projects/float-toolkit/tsconfig.spec.json",
 						"polyfills": ["zone.js", "zone.js/testing"]
 					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": ["projects/float-toolkit/**/*.ts", "projects/float-toolkit/**/*.html"],
+						"fix": true
+					}
 				}
 			}
 		}
 	},
 	"cli": {
-		"analytics": "d1bf6908-1cc2-4815-9ede-de1b962b93ef"
+		"analytics": "d1bf6908-1cc2-4815-9ede-de1b962b93ef",
+		"schematicCollections": ["@angular-eslint/schematics"]
 	}
 }
