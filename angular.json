@@ -38,7 +38,11 @@
 
 					"options": {
 						"tsConfig": "./tsconfig.base.spec.json",
-						"polyfills": ["zone.js", "zone.js/testing"]
+						"karmaConfig": "./karma.conf.js",
+						"polyfills": ["zone.js", "zone.js/testing"],
+
+						"watch": false,
+						"codeCoverage": true
 					}
 				},
 

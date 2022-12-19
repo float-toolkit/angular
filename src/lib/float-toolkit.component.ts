@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-	selector: "lib-float-toolkit",
+	selector: "ft-float-toolkit",
 	template: ` <p>float-toolkit works!</p> `,
 	styles: [],
 })

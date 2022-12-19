@@ -1,9 +1,9 @@
 name: Test with Karma
 
 on:
-  # push:
-  #   branches-ignore:
-  #     - stable
+  push:
+    branches-ignore:
+      - stable
 
   workflow_dispatch:
 
