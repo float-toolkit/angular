@@ -1,10 +1,12 @@
 {
-	"extends": "./tsconfig.json",
+	"extends": "./tsconfig.base.spec.json",
 
 	"compilerOptions": {
-		"outDir": "./out-tsc/spec",
-		"types": ["jasmine"]
+		"composite": true,
+
+		"declaration": true
 	},
 
-	"include": ["**/*.spec.ts", "**/*.d.ts"]
+	"include": ["./src/**/*.spec.ts", "**/*.d.ts"],
+	"references": [{ "path": "./tsconfig.json" }]
 }

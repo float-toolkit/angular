@@ -1,0 +1,11 @@
+{
+	"extends": "./tsconfig.base.json",
+
+	"compilerOptions": {
+		"types": ["jasmine"],
+
+		"outDir": "./out-tsc/spec"
+	},
+
+	"include": ["./src/**/*.ts", "**/*.d.ts"]
+}

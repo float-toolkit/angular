@@ -69,7 +69,7 @@ module.exports = {
 
 	overrides: [
 		{
-			files: ["./.eslintrc.js", "**/*.ts"],
+			files: ["./.eslintrc.js", "./src/**/*.ts"],
 
 			env: {
 				es6: true,
@@ -186,7 +186,7 @@ module.exports = {
 		},
 
 		{
-			files: ["**/*.html"],
+			files: ["./src/**/*.html"],
 			extends: ["plugin:@angular-eslint/template/recommended"],
 		},
 	],

@@ -1,0 +1,57 @@
+{
+	"compilerOptions": {
+		"target": "es2022",
+		"lib": ["es2022", "dom"],
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"useDefineForClassFields": false,
+
+		"module": "es2022",
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"paths": {
+			"float-toolkit": ["dist/float-toolkit"]
+		},
+		"types": [],
+		"resolveJsonModule": true,
+
+		"declaration": false,
+		"sourceMap": true,
+		"outDir": "./dist/out-tsc",
+		"importHelpers": true,
+		"downlevelIteration": true,
+		"stripInternal": true,
+		"noEmitOnError": true,
+
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"useUnknownInCatchVariables": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+
+		"skipLibCheck": true
+	},
+
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
+	}
+}
