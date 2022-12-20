@@ -14,7 +14,7 @@
 		"noEmit": false
 	},
 
-	"include": ["./.eslintrc.js", "./karma.conf.js"],
+	"include": ["./.eslintrc.js", "./karma.conf.js", "./scripts/**/*.mjs", "./package.json"],
 	"exclude": [],
 	"references": []
 }

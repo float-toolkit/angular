@@ -8,7 +8,7 @@
 
 [![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/angular?label=version&logo=npm)](https://www.npmjs.com/package/@float-toolkit/angular)
 [![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/angular?logo=npm)](https://www.npmjs.com/package/@float-toolkit/angular)
-[![Tests status](https://img.shields.io/github/workflow/status/float-toolkit/angular/Test%20with%20Karma?label=tests&logo=angular&logoColor=white)](https://github.com/float-toolkit/angular/actions/workflows/testWithKarma.yml)
+[![Tests status](https://img.shields.io/github/actions/workflow/status/float-toolkit/angular/testWithKarma.yml?branch=master&label=tests&logo=angular&logoColor=white)](https://github.com/float-toolkit/angular/actions/workflows/testWithKarma.yml)
 [![Code coverage with Codecov](https://img.shields.io/codecov/c/github/float-toolkit/angular/tests?logo=codecov&logoColor=white)](https://codecov.io/gh/float-toolkit/angular)
 [![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/float-toolkit/angular/blob/master/.github/CODE_OF_CONDUCT.md)
 

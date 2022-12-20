@@ -1,5 +1,5 @@
 {
 	"extends": "./tsconfig.base.json",
 
-	"include": ["./src/**/*.ts", "./src/**/*.html", "./.eslintrc.js", "./karma.conf.js"]
+	"include": ["./src/**/*.ts", "./src/**/*.html", "./scripts/**/*.mjs", "./.eslintrc.js", "./karma.conf.js"]
 }

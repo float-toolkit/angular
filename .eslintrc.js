@@ -69,7 +69,7 @@ module.exports = {
 
 	overrides: [
 		{
-			files: ["./.eslintrc.js", "./karma.conf.js", "./src/**/*.ts"],
+			files: ["./.eslintrc.js", "./karma.conf.js", "./src/**/*.ts", "./scripts/**/*.mjs"],
 
 			env: {
 				es6: true,
@@ -173,7 +173,7 @@ module.exports = {
 		},
 
 		{
-			files: ["./.eslintrc.js", "./karma.conf.js"],
+			files: ["*.js", "./scripts/**/*.mjs"],
 
 			env: {
 				es6: true,

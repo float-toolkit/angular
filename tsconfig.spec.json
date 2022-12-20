@@ -7,6 +7,6 @@
 		"declaration": true
 	},
 
-	"include": ["./src/**/*.spec.ts", "**/*.d.ts"],
+	"include": ["./src/__tests__/**/*.spec.ts", "**/*.d.ts"],
 	"references": [{ "path": "./tsconfig.json" }]
 }
