@@ -2,11 +2,21 @@
 /node_modules
 
 # production
-/dist
 /out-tsc
 *.tgz
 
+# source and scripts
+/src
+/scripts
+/.github
+.gitignore
+/dist/**/*.js.map
+/dist/**/*.mjs.map
+angular.json
+ng-package.json
+
 # testing and coverage
+karma.conf.ts
 /logs
 /coverage
 
@@ -23,20 +33,19 @@ node_modules.bun
 *.launch
 .settings/
 *.sublime-workspace
+/.vscode
+.editorconfig
+.eslintrc.js
+.prettierrc
+.prettierignore
+tsconfig*.json
+jsconfig*.json
 .DS_Store
 **/tsconfig*.tsbuildinfo
 **/jsconfig*.tsbuildinfo
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
 # misc
-/.angular/cache
+/.angular
 .sass-cache/
 /connect.lock
 /libpeerconnection.log

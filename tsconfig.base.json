@@ -9,15 +9,12 @@
 		"module": "es2022",
 		"moduleResolution": "node",
 		"baseUrl": "./",
-		"paths": {
-			"float-toolkit": ["dist/float-toolkit"]
-		},
 		"types": [],
 		"resolveJsonModule": true,
 
 		"declaration": false,
 		"sourceMap": true,
-		"outDir": "./dist/out-tsc",
+		"outDir": "./out-tsc",
 		"importHelpers": true,
 		"downlevelIteration": true,
 		"stripInternal": true,

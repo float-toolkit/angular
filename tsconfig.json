@@ -8,6 +8,6 @@
 	},
 
 	"include": ["./src/**/*.ts", "./src/**/*.html"],
-	"exclude": ["./src/__tests__/**/*.spec.ts"],
-	"references": [{ "path": "./tsconfig.spec.json" }, { "path": "./jsconfig.json" }]
+	"exclude": ["./src/__tests__/**/*.spec.ts", "./src/schematics/**/*.ts"],
+	"references": [{ "path": "./tsconfig.schematics.json" }, { "path": "./tsconfig.spec.json" }, { "path": "./jsconfig.json" }]
 }

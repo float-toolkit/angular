@@ -6,5 +6,5 @@
 		"entryFile": "./src/index.ts"
 	},
 
-	"allowedNonPeerDependencies": ["@float-toolkit/core"]
+	"allowedNonPeerDependencies": ["@angular-devkit/schematics", "@float-toolkit/core", "@schematics/angular"]
 }

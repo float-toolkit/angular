@@ -1,0 +1,15 @@
+{
+	"extends": "./tsconfig.base.json",
+
+	"compilerOptions": {
+		"lib": ["es2022"],
+
+		"module": "commonjs",
+		"rootDir": "./src/schematics/",
+		"types": ["node"],
+
+		"outDir": "./dist/schematics/"
+	},
+
+	"include": ["./src/schematics/**/*.ts", "./src/schematics/**/*.json"]
+}

@@ -3,13 +3,15 @@ import FloatToolkitCore from "@float-toolkit/core";
 
 import { versionNumbers } from "./versionNumbers";
 
+// * In the following TypeDoc comment, there is a U+200c character before @Component({...}) to prevent the parser from confusing it
+// * with a tag.
 /**
  * An Angular injectable (service) that implements FloatToolkit methods and an `output` property.
  *
  * @example
  * import { FloatToolkit } from "@float-toolkit/angular";
  *
- * \@Component({...})
+ * ‌@Component({...})
  * export class SumComponent {
  * 	constructor(private ft: FloatToolkit) {}
  * }
