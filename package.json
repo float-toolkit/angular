@@ -4,7 +4,7 @@
 	"description": "An Angular service wrapper for Float Toolkit",
 	"scripts": {
 		"build": "npm test && npm run build:base",
-		"build:ci": "npm test:ci && npm run build:base",
+		"build:ci": "npm run test:ci && npm run build:base",
 		"build:base": "ng build && tsc -p tsconfig.base.schematics.json",
 		"test": "ng test",
 		"test:ci": "npm run pretest && ng test --browsers=ChromeCI",
