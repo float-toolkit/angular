@@ -32,12 +32,16 @@ export const ngAdd: RuleFactory<Options> = options => (tree, context) => {
 
 	const appModule = appModuleBuffer.toString("utf-8");
 
-	overwriteRoot(
-		tree,
-		appModulePath,
-		`import { FloatToolkitModule } from "@float-toolkit/angular";\n${appModule.replace(
-			/imports\s*:\s*\[/,
-			"imports: [FloatToolkitModule,"
-		)}`
-	);
+	if (!appModule.includes("FloatToolkitModule")) {
+		overwriteRoot(
+			tree,
+			appModulePath,
+			`import { FloatToolkitModule } from "@float-toolkit/angular";\n${appModule.replace(
+				/imports\s*:\s*\[/,
+				"imports: [FloatToolkitModule,"
+			)}`
+		);
+	}
+
+	return tree;
 };

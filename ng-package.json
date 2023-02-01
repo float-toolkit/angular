@@ -5,6 +5,7 @@
 	"lib": {
 		"entryFile": "./src/index.ts"
 	},
+	"assets": ["./.npmignore"],
 
 	"allowedNonPeerDependencies": ["@angular-devkit/schematics", "@float-toolkit/core", "@schematics/angular"]
 }
